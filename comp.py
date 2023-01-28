@@ -14,4 +14,4 @@ def compute(pixmaps, filters_matrices_list, on_cpu):
         matrices_after_filters = compute_on_gpu(pixmaps_matrices_list, filters_matrices_list)
 
     return list(map(lambda i: (pixmaps[i], matrix_to_pixmap(matrices_after_filters[i], images_with_formats[i][1])),
-            range(len(pixmaps))))
+                     range(len(pixmaps))))
